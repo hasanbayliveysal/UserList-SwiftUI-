@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+final class NetworkService {
+    static let shared = NetworkService()
+    
+    func fetchUsers(with url: String) async throws -> [UserList.User] {
+        return try await URLSession.shared.fetch(with: url)
+    }
+}
