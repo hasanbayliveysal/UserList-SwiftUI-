@@ -14,7 +14,7 @@ final class UserListViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var error = ""
     
-    private let url = "https://api.github.com/uswers"
+    private let url = "https://api.github.com/users"
     func getUsers() async {
         isLoading = true
         do {
